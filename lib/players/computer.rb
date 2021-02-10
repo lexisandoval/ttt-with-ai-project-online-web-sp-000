@@ -21,7 +21,6 @@ module Players
       else
         "9"
       end
-
     end
   end
 end
