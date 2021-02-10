@@ -3,7 +3,10 @@ module Players
 
     def move(input)
       puts "Please enter 1-9:"
-      gets.chomp
+      i = gets.chomp
+      if valid_move?(i)
+        return i
+      end
     end
   end
 end
