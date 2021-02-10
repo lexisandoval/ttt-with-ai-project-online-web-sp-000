@@ -48,4 +48,4 @@ def start_game
    end
  end
 
-start
+start_game
