@@ -24,10 +24,10 @@ class Game
   end
 
   def won?
-    WIN_COMBINATIONS.each do |win_combinations|
-      if (board.cells[win_combinations[0]]== "X" && board.cells[win_combinations[1]]=="X" && board.cells[win_combinations[2]]=="X") ||
-         (board.cells[win_combinations[0]]== "O" && board.cells[win_combinations[1]]=="O" && board.cells[win_combinations[2]]== "O")
-        return win_combinations
+    WIN_COMBINATIONS.each do |win|
+      if (board.cells[win[0]]== "X" && board.cells[win[1]]=="X" && board.cells[win[2]]=="X") ||
+         (board.cells[win[0]]== "O" && board.cells[win[1]]=="O" && board.cells[win[2]]== "O")
+        return win
       end
     end
     return false
@@ -43,10 +43,10 @@ class Game
 
   def winner
     if won?
-      WIN_COMBINATIONS.each do |win_combinations|
-        if (board.cells[win_combinations[0]]== "X" && board.cells[win_combinations[1]]=="X" && board.cells[win_combinations[2]]=="X")
+      WIN_COMBINATIONS.each do |win|
+        if (board.cells[win[0]]== "X" && board.cells[win[1]]=="X" && board.cells[win[2]]=="X")
           return "X"
-        elsif (board.cells[win_combinations[0]]== "O" && board.cells[win_combinations[1]]=="O" && board.cells[win_combinations[2]]== "O")
+        elsif (board.cells[win[0]]== "O" && board.cells[win[1]]=="O" && board.cells[win[2]]== "O")
           return "O"
         end
       end
