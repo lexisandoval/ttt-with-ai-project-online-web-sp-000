@@ -7,7 +7,7 @@ def start_game
     0 player
     1 player
     2 player
-    (Enter number only.)"
+  (Enter number only.)"
 
   mode = gets.strip
 
